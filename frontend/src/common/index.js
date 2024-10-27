@@ -12,6 +12,18 @@ const SumaryApi = {
     current_user : {
         url: `${backendDomin}/api/user-details`,
         method : "get"
+    },
+    logout_user : {
+        url: `${backendDomin}/api/userLogout`,
+        method : "get"
+    },
+    allUser : {
+        url : `${backendDomin}/api/all-user`,
+        method : "get"
+    },
+    updateUser:{
+        url : `${backendDomin}/api/update-user`,
+        method : "post"
     }
 }
 
