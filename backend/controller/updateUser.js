@@ -3,13 +3,12 @@ const userModel = require("../models/userModel")
 async function updateUser(req,res) {
     try{
         const sessionUser =req.userId
-
         const {userId, email, name, role} = req.body
 
         const payload = {
             ...(email && { email : email}),
-            ...(name && { email : name}),
-            ...(role && { email : role}),
+            ...(name && { name : name}),
+            ...(role && { role : role}),
         }
         const user = await userModel.findById(sessionUser)
 
